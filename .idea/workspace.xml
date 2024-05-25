@@ -4,25 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a8a86f-baef-4bbf-b429-82e44b7c19ad" name="Changes" comment="updated game loop">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_one_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/outside_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+    <list default="true" id="30a8a86f-baef-4bbf-b429-82e44b7c19ad" name="Changes" comment="added collision detection and gravity">
+      <change afterPath="$PROJECT_DIR$/res/button_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/level_one_data_long.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/pause_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/urm_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/volume_buttons.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/gamestates/Gamestate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levels/LevelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/StateMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/MenuButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/PauseButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/PauseOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/SoundButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/UrmButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/VolumeButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inputs/KeyboardInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/KeyboardInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inputs/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/MouseInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +41,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,6 +54,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -122,7 +135,9 @@
       <workItem from="1716381195363" duration="1401000" />
       <workItem from="1716449427655" duration="11614000" />
       <workItem from="1716473669582" duration="4158000" />
-      <workItem from="1716533222704" duration="6204000" />
+      <workItem from="1716533222704" duration="8744000" />
+      <workItem from="1716551652453" duration="4638000" />
+      <workItem from="1716624437900" duration="8301000" />
     </task>
     <task id="LOCAL-00001" summary="created basic game">
       <option name="closed" value="true" />
@@ -140,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716458283235</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added collision detection and gravity">
+      <option name="closed" value="true" />
+      <created>1716539830522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716539830522</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created basic game" />
     <MESSAGE value="updated game loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated game loop" />
+    <MESSAGE value="added collision detection and gravity" />
+    <option name="LAST_COMMIT_MESSAGE" value="added collision detection and gravity" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -19,14 +19,11 @@ public abstract class Entity {
         g.drawRect((int) hitBox.x, (int) hitBox.y, (int) hitBox.width, (int) hitBox.height);
     }
 
-    protected void init(float x, float y, float width, float height) {
+    protected void init(float x, float y, int width, int height) {
         hitBox = new Rectangle2D.Float(x, y, width, height);
     }
 
-//    protected void updateHitBox() {
-//        hitBox.x = (int) x;
-//        hitBox.y = (int) y;
-//    }
+
 
     public Rectangle2D.Float getHitBox() {
         return hitBox;

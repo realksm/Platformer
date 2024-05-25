@@ -1,6 +1,34 @@
 package utils;
 
+import main.Game;
+
 public class Constants {
+    public static class UI {
+        public static class Buttons {
+            public static class Menu {
+                public static final int MENU_BUTTON_WIDTH_DEFAULT = 140;
+                public static final int MENU_BUTTON_HEIGHT_DEFAULT = 56;
+                public static final int MENU_BUTTON_WIDTH = (int) (MENU_BUTTON_WIDTH_DEFAULT * Game.SCALE);
+                public static final int MENU_BUTTON_HEIGHT = (int) (MENU_BUTTON_HEIGHT_DEFAULT * Game.SCALE);
+            }
+            public static class Pause {
+                public static final int SOUND_BUTTON_SIZE_DEFAULT = 42;
+                public static final int SOUND_BUTTON_SIZE = (int) (SOUND_BUTTON_SIZE_DEFAULT * Game.SCALE);
+            }
+            public static class URM {
+                public static final int URM_BUTTON_DEFAULT_SIZE = 56;
+                public static final int URM_BUTTON_SIZE = (int) (URM_BUTTON_DEFAULT_SIZE * Game.SCALE);
+            }
+            public static class Volume {
+                public static final int VOLUME_BUTTON_DEFAULT_WIDTH = 28;
+                public static final int VOLUME_BUTTON_DEFAULT_HEIGHT = 44;
+                public static final int SLIDER_DEFAULT_WIDTH = 215;
+                public static final int VOLUME_BUTTON_WIDTH = (int) (VOLUME_BUTTON_DEFAULT_WIDTH * Game.SCALE);
+                public static final int VOLUME_BUTTON_HEIGHT = (int) (VOLUME_BUTTON_DEFAULT_HEIGHT * Game.SCALE);
+                public static final int SLIDER_WIDTH = (int) (SLIDER_DEFAULT_WIDTH * Game.SCALE);
+            }
+        }
+    }
     public static class Directions {
         public static final int LEFT = 0;
         public static final int UP = 1;

@@ -15,7 +15,7 @@ public class Player extends Entity{
     private int playerAction = IDLE;
     private boolean moving = false;
     private boolean left, up, right, down, jump;
-    private float playerSpeed = 2.0f;
+    private float playerSpeed = Game.SCALE;
     private boolean attacking = false;
     private int[][] levelData;
     private float xDrawOffset = 21f * Game.SCALE;
@@ -29,7 +29,7 @@ public class Player extends Entity{
     private boolean inAir = false;
     public Player(float x, float y, int width, int height) {
         super(x, y, width, height);
-        init(x, y, 20 * Game.SCALE, 27 * Game.SCALE);
+        init(x, y, (int) (20 * Game.SCALE), (int) (27 * Game.SCALE));
         loadAnimations();
     }
     public void update() {

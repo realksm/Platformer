@@ -11,7 +11,8 @@ public class Helper {
         return !isSolid(x, y + height, levelData);
     }
     private static boolean isSolid(float x, float y, int[][] levelData) {
-        if (x < 0 || x >= Game.GAME_WIDTH || y < 0 || y >= Game.GAME_HEIGHT) return true;
+        int maxWidth = levelData[0].length * Game.TILES_SIZE;
+        if (x < 0 || x >= maxWidth || y < 0 || y >= Game.GAME_HEIGHT) return true;
 
         float xIndex = x / Game.TILES_SIZE;
         float yIndex = y / Game.TILES_SIZE;
